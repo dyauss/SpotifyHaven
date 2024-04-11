@@ -1,0 +1,65 @@
+@import 'bulma/bulma';
+
+html, body {
+    margin: 0px;
+    position: relative; 
+    height: 100%
+}
+.background {
+    min-height: 100%;
+    width: 100%;
+    // background-image: url("https://images7.alphacoders.com/969/969682.jpg");
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,121,86,0.6862394616049545) 0%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+ul {
+    list-style: none !important;
+}
+
+.footer-title {
+    color: #666 !important;
+}
+
+.footer-a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.footer-a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.footer-a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.footer-btn {
+    // display: inline-block;
+    // font-weight: 400;
+    // line-height: 1.5;
+    // height: 45px;
+    // width: 45px;
+    // text-align: center;
+    border-radius: 50%;
+    // padding: 9px 0px;
+    // color: rgb(248, 249, 250);
+    // border-color: rgb(248, 249, 250);
+    // background-color: green;
+    border: 1px solid white;
+}
+
+.footer-credits {
+    font-size: 12px;
+}
+
+.footer-logo {
+    font-size: 15px !important;
+}

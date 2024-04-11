@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SpotifyHaven</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+    <nav class="navbar is-dark">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <%= image_tag("spotifyhavenlogo.png", class: "lion" )%>
+        </a>
+        <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/"> Início </a>
+          <a class="navbar-item" href="/nossos-programas"> Nossos programas </a>
+          <a class="navbar-item" href="#"> Associados </a>
+          <a class="navbar-item" href="/historia"> História </a>
+          <a class="navbar-item" href="/contato"> Contato </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a
+                  class="button"
+                  target="_blank"
+                  href="#">
+                  <span class="icon is-medium">
+                    <i class="fa-solid fa-moon"></i>
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="background">
+      <%= yield %>
+    </div>
+    <footer class="has-background-black	has-text-white py-5">
+      <div class="content ">
+        <div class="container">
+          <%# <h4>Bem vindos à Escola Shuo Jin Kung Fu, oferecemos aulas de Kung Fu tradicional estilo Choy Lee Fut, Sanda e Taichi. Venha nos visitar e marque uma aula experimental!</h4> %>
+          <div class="columns">
+            <div class="column">
+              <ul class="">
+                <h5 class="footer-title">Quem somos</h5>
+                <li><a href="/nossos-programas" class="footer-a">Nossos programas</a></li>
+                <li><a href="/officialmembers" class="footer-a">Membros oficiais</a></li>
+                <li><a href="#!" class="footer-a">Onde estamos</a></li>
+                <li><a href="#!" class="footer-a">Nossa motivação</a></li>
+              </ul>
+            </div>
+            <div class="column">
+                <ul class="ul-unstyled">
+                  <h5 class="footer-title">Conheça mais</h5>
+                  <li><a href="/historia" class="footer-a">Nossa história</a></li>
+                  <li><a href="/liondance" class="footer-a">Dança do Leão</a></li>
+                  <li><a href="/profile" class="footer-a">Membros</a></li>
+                  <li><a href="/users/sign_up" class="footer-a">Matrícula online</a></li>
+                </ul>
+            </div>
+            <div class="column">
+              <ul class="" style="list-style: none;">
+                <h5 class="footer-title">Links úteis</h5>
+                <li><a href="#!" class="footer-a">Contrate uma apresentação</a></li>
+                <li><a href="#!" class="footer-a">Escolas filiadas</a></li>
+                <li><a href="#!" class="footer-a">Calendário</a></li>
+                <li><a href="/contato" class="footer-a">Contato</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr/>
+          <div class="footer-credits is-flex is-justify-content-space-between">
+            <div>
+              <span>
+                © 2024 Spotify Haven, Inc. All rights reserved.<br>
+                Developed by <%= link_to "Dyaus", "https://github.com/dyauss", target: :_blank %> with
+              </span>
+              <span class="icon is-medium">
+                <%= image_tag 'rails.png' %>
+              </span>
+            </div>
+            <div class="footer-logo">
+              <span class="icon is-large">
+                <%# image_tag("TIGERSFINALLOGO.png", class: "lion" )%>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
