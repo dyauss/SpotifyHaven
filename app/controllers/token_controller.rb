@@ -1,7 +1,7 @@
-class ApplicationController < ActionController::Base
-  include HTTParty
-
-  helper_method :get_access_token_refresh
+class TokenController < ApplicationController
+  def refresh
+    get_access_token_refresh
+  end
 
   private
     def get_access_token_refresh

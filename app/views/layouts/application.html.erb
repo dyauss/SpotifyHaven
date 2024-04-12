@@ -27,10 +27,10 @@
       <div id="navbarExampleTransparentExample" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item" href="/"> Início </a>
-          <a class="navbar-item" href="/nossos-programas"> Nossos programas </a>
-          <a class="navbar-item" href="#"> Associados </a>
+          <a class="navbar-item" href="/obsessions">Obsessions</a>
+          <a class="navbar-item" href="/playlists">Playlists</a>
           <a class="navbar-item" href="/historia"> História </a>
-          <a class="navbar-item" href="/contato"> Contato </a>
+          <a class="navbar-item" href="/about"> Sobre </a>
         </div>
 
         <div class="navbar-end">
@@ -52,7 +52,9 @@
       </div>
     </nav>
     <div class="background">
-      <%= yield %>
+      <div class="container pt-4">
+        <%= yield %>
+      </div>
     </div>
     <footer class="has-background-black	has-text-white py-5">
       <div class="content ">
@@ -62,7 +64,7 @@
             <div class="column">
               <ul class="">
                 <h5 class="footer-title">Quem somos</h5>
-                <li><a href="/nossos-programas" class="footer-a">Nossos programas</a></li>
+                <li><a href="/obsession" class="footer-a">My obsessions</a></li>
                 <li><a href="/officialmembers" class="footer-a">Membros oficiais</a></li>
                 <li><a href="#!" class="footer-a">Onde estamos</a></li>
                 <li><a href="#!" class="footer-a">Nossa motivação</a></li>
@@ -100,7 +102,7 @@
             </div>
             <div class="footer-logo">
               <span class="icon is-large">
-                <%# image_tag("TIGERSFINALLOGO.png", class: "lion" )%>
+                <%= image_tag("spotifyhavenlogo.png", class: "lion" )%>
               </span>
             </div>
           </div>

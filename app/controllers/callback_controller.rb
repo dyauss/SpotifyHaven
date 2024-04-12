@@ -7,7 +7,7 @@ class CallbackController < ApplicationController
     code_from_spotify = params[:code]
     puts 'passs ' + code_from_spotify
     access_token = get_access_token(code_from_spotify)
-    my_method(access_token)
+    # my_method(access_token)
   end
 
   private
@@ -21,6 +21,9 @@ class CallbackController < ApplicationController
         }
       })
       response_data = JSON.parse(response.body)
+      # puts response_data
+      cookies[:access_token] = response_data['access_token']
+      cookies[:refresh_token] = response_data['refresh_token']
       response_data['access_token']
       # puts response_data
     end
@@ -33,7 +36,6 @@ class CallbackController < ApplicationController
         }
       })
       response_data = JSON.parse(response.body)
-      puts 'truncheons and shields'
       puts response_data
     end
 end

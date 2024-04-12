@@ -1,0 +1,19 @@
+.image-card {
+    height: 10em;
+    width: 11em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: blue;
+    
+}
+
+.card-title {
+    width: 11em;
+    background-color: rgba(0, 0, 0, 0.71);
+    color: white;
+}
+
+.my-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

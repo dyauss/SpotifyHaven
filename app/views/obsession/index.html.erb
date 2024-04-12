@@ -1,0 +1,19 @@
+<h1 class="title">Obsessions</h1>
+<p>Aqui você pode escolher até 3 artistas para serem sua obssessão da semana</p>
+<%= @artists.size %><br>
+
+<div class="image-card">
+
+</div>
+<div class="grid">
+    <% @artists.each do |artist| %>
+        <div class="cell ">
+            <div class="image-card">
+                <%= image_tag(artist['images'][0]['url'], class: "my-img") %><br>
+            </div>
+            <div class="card-title">
+                <p><%= artist['name'] %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
